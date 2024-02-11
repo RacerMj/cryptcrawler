@@ -1,0 +1,17 @@
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\bin\Debug\net8.0-windows\Final Project 2.0.exe
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\bin\Debug\net8.0-windows\Final Project 2.0.deps.json
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\bin\Debug\net8.0-windows\Final Project 2.0.runtimeconfig.json
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\bin\Debug\net8.0-windows\Final Project 2.0.dll
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\bin\Debug\net8.0-windows\Final Project 2.0.pdb
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final_Project_2._0.DungeonForm.resources
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final Project 2.0.csproj.GenerateResource.cache
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final Project 2.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final Project 2.0.AssemblyInfoInputs.cache
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final Project 2.0.AssemblyInfo.cs
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final Project 2.0.csproj.CoreCompileInputs.cache
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final Project 2.0.dll
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\refint\Final Project 2.0.dll
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final Project 2.0.pdb
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final Project 2.0.genruntimeconfig.cache
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\ref\Final Project 2.0.dll
+C:\Users\lakew\source\repos\Final Project 2.0\Final Project 2.0\obj\Debug\net8.0-windows\Final_Project_2._0.Properties.Resources.resources
