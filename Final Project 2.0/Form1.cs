@@ -584,6 +584,14 @@ namespace Final_Project_2._0
             return this.dungeon;
         }
 
+
+        /****************************************************************
+         * 
+         * Utility methods to give access to form controls
+         *
+         *
+         *
+         *****************************************************************/
         public String getInputText() { return this.textBox1.Text.Trim(); }
         public void showText(string s) { textBox2.AppendText(s + System.Environment.NewLine); }
         public void showTextLine(string s) { textBox2.AppendText(s + System.Environment.NewLine); }
