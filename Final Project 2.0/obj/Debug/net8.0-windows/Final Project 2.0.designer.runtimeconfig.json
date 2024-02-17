@@ -1,11 +1,23 @@
 {
   "runtimeOptions": {
     "tfm": "net8.0",
+    "frameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "8.0.0"
+      },
+      {
+        "name": "Microsoft.WindowsDesktop.App",
+        "version": "8.0.0"
+      }
+    ],
     "additionalProbingPaths": [
-      "C:\\Users\\c_ewi\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\c_ewi\\.nuget\\packages"
+      "C:\\Users\\racer\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\racer\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
+      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }

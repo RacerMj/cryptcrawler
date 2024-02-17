@@ -1,14 +1,3 @@
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.Eventing.Reader;
-using System.Drawing.Imaging;
-using System.Media;
-using System.Security.Cryptography;
-using System.Web;
-using System.Windows.Forms.Design;
-using System.Xml.Linq;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace Final_Project_2._0
 {
     /*The type can be Fire, Earth, Water, and Air. Determines the monsters that spawn within each level fire = 0, earth = 1, water = 2, air = 3
@@ -18,7 +7,7 @@ namespace Final_Project_2._0
 
     public partial class DungeonForm : Form
     {
-        //Subsitiuiton for length max value of random in room function (max value should be length of creatureArray)
+        //Substitution for length max value of random in room function (max value should be length of creatureArray)
         public const int NUMCREATURES = 16;
         public const int MINROOMS = 10;
         public const int MAXROOMS = 20;
@@ -36,13 +25,15 @@ namespace Final_Project_2._0
         public string[] monsterHitDescription = new string[5];
         public string[] monsterMissDescription = new string[5];
         public string[] monsterDeathDescription = new string[5];
-         Random random = new Random();
+        Random random = new Random();
         int whatLevelPlayerIsOn = 0;
         Room whatRoomPlayerIsIn = null;
-        Coords playerCoords = new Coords(0,0,0);
+        Coords playerCoords = new Coords(0, 0, 0);
         int randomInt = 0;
         public Dungeon dungeon;
         Creature player;
+
+
         public DungeonForm()
         {
             InitializeComponent();
@@ -107,7 +98,7 @@ namespace Final_Project_2._0
             decorationList[18] = new Decoration(12, "A fountain");
             decorationList[19] = new Decoration(12, "A notch");
 
-            weaponArray[0] = new Weapon(5,"dagger", "Small and agile, this is a cheap weapon for beginner adventures");
+            weaponArray[0] = new Weapon(5, "dagger", "Small and agile, this is a cheap weapon for beginner adventures");
             weaponArray[1] = new Weapon(10, "sword", " not the best weapon, but useful and reliable");
             weaponArray[2] = new Weapon(15, "greatsword", " will just as easily crush bones as cut through them. Avoid being hit");
 
@@ -151,23 +142,23 @@ namespace Final_Project_2._0
 
             //Creatue Array 
             //For level 0 equals
-            creatureArray[0] = new Creature(5, 0, "rat", 2, "large, furry, and stinking, and these creatures can be found just about  anywhere.", 20, 2, 0, 1,3,false);
-            creatureArray[1] = new Creature(15, 5, "Skeleton", 4, "versatile and common, and these undead are a favourite of necromancers everywhere.", 3, 7, 0, 1,9, true);
-            creatureArray[2] = new Creature(30, 5, "Zombie", 4, "tough but slow, and these creatures are sadistic and violent in death.", 3, 10, 0, 1,7, false);
-            creatureArray[3] = new Creature(12, 3, "Goblin", 3, "common and weak, and these creatues serve a fodder or food for their stronger companions.", 7, 4, 0, 1,11, true);
-            creatureArray[4] = new Creature(10, 0, "Giant-Spider", 5, "fast and deadly in numbers, and these creatures promise a slow death to any prey.", 6, 4, 1, 1,12, false);
-            creatureArray[5] = new Creature(15, 5, "Harpy", 5, "these half-woman-half-bird creatures control the sky, but are mostly eradictated in populous areas.", 5, 5, 0, 3,10,true);
-            creatureArray[6] = new Creature(30,8,"Animated-Armour", 6, "glowing slightly, these intricate armour suits are guarding something long gone",2,5,1,3,16,true);
-            creatureArray[7] = new Creature(25,3, "Werewolf",7,"vicious, fast, and full off teeth, no adventurer not ever wants to encounter these beasts.", 3,15,0,1,10,false);
-            creatureArray[8] = new Creature(10, 5, "Kobold", 6,"the lesser version of goblins, these reptilian creatures show very little remorse or connection with eachother.", 5,6,0,1,6,true);
-              creatureArray[9] = new Creature(15,7,"Siren",4, "enchanting and aquatic, these beings lure adventurers with haunting melodies.",3,10,0,2,10,true);
-              creatureArray[10] = new Creature(30,6,"Gnoll", 5, "these hyena-headed humanoids are known for their brutality and savagery.", 2, 12,0,1,12,true);
-              creatureArray[11] = new Creature(10,0,"Magma-Nephid", 3, "formed from pure flowing fire, these creatures are not known for good hugs, a fact they often refute.",3, 5, 0, 0, 8, false);
-              creatureArray[12] = new Creature(15,5, "Saughin", 3, "a life under the sea in a militaristic has bread these creatures for war, but I believe in you!", 4, 10, 0, 2, 13, true);
-              creatureArray[13] = new Creature(20,0, "Sea-Serpent", 5, "these creature have been around forever, and will be here long after humanity. Be weary of the deep.", 3,15,0,2,12, false);
-              creatureArray[14] = new Creature(50,10, "Giant-Clam", 1, "Tough as nails, these creatures have been known to collect treasure. Perhaps you should give it a shot?",1,5,0,2,17, false);
-              creatureArray[15] = new Creature(30, 0, "Fire-Elemental", 7, "fast, hard-to-hit, and mean, many mountain travelers have been claimed by them.", 2, 13, 0,3,15, false);
-              creatureArray[16] = new Creature(10, 6, "Kenku", 5, "shifty little bird-people, most find Kenku annoying, if not outright repulsive.", 4,6,0,3,12, true);
+            creatureArray[0] = new Creature(5, 0, "rat", 2, "large, furry, and stinking, and these creatures can be found just about  anywhere.", 20, 2, 0, 1, 3, false);
+            creatureArray[1] = new Creature(15, 5, "Skeleton", 4, "versatile and common, and these undead are a favourite of necromancers everywhere.", 3, 7, 0, 1, 9, true);
+            creatureArray[2] = new Creature(30, 5, "Zombie", 4, "tough but slow, and these creatures are sadistic and violent in death.", 3, 10, 0, 1, 7, false);
+            creatureArray[3] = new Creature(12, 3, "Goblin", 3, "common and weak, and these creatues serve a fodder or food for their stronger companions.", 7, 4, 0, 1, 11, true);
+            creatureArray[4] = new Creature(10, 0, "Giant-Spider", 5, "fast and deadly in numbers, and these creatures promise a slow death to any prey.", 6, 4, 1, 1, 12, false);
+            creatureArray[5] = new Creature(15, 5, "Harpy", 5, "these half-woman-half-bird creatures control the sky, but are mostly eradictated in populous areas.", 5, 5, 0, 3, 10, true);
+            creatureArray[6] = new Creature(30, 8, "Animated-Armour", 6, "glowing slightly, these intricate armour suits are guarding something long gone", 2, 5, 1, 3, 16, true);
+            creatureArray[7] = new Creature(25, 3, "Werewolf", 7, "vicious, fast, and full off teeth, no adventurer not ever wants to encounter these beasts.", 3, 15, 0, 1, 10, false);
+            creatureArray[8] = new Creature(10, 5, "Kobold", 6, "the lesser version of goblins, these reptilian creatures show very little remorse or connection with eachother.", 5, 6, 0, 1, 6, true);
+            creatureArray[9] = new Creature(15, 7, "Siren", 4, "enchanting and aquatic, these beings lure adventurers with haunting melodies.", 3, 10, 0, 2, 10, true);
+            creatureArray[10] = new Creature(30, 6, "Gnoll", 5, "these hyena-headed humanoids are known for their brutality and savagery.", 2, 12, 0, 1, 12, true);
+            creatureArray[11] = new Creature(10, 0, "Magma-Nephid", 3, "formed from pure flowing fire, these creatures are not known for good hugs, a fact they often refute.", 3, 5, 0, 0, 8, false);
+            creatureArray[12] = new Creature(15, 5, "Saughin", 3, "a life under the sea in a militaristic has bread these creatures for war, but I believe in you!", 4, 10, 0, 2, 13, true);
+            creatureArray[13] = new Creature(20, 0, "Sea-Serpent", 5, "these creature have been around forever, and will be here long after humanity. Be weary of the deep.", 3, 15, 0, 2, 12, false);
+            creatureArray[14] = new Creature(50, 10, "Giant-Clam", 1, "Tough as nails, these creatures have been known to collect treasure. Perhaps you should give it a shot?", 1, 5, 0, 2, 17, false);
+            creatureArray[15] = new Creature(30, 0, "Fire-Elemental", 7, "fast, hard-to-hit, and mean, many mountain travelers have been claimed by them.", 2, 13, 0, 3, 15, false);
+            creatureArray[16] = new Creature(10, 6, "Kenku", 5, "shifty little bird-people, most find Kenku annoying, if not outright repulsive.", 4, 6, 0, 3, 12, true);
             /*creatureArray[17] = new Creature();
             creatureArray[18] = new Creature();
             creatureArray[19] = new Creature(); */
@@ -206,7 +197,7 @@ namespace Final_Project_2._0
 
         }
 
-        public void createPlayer() 
+        public void createPlayer()
         {
             this.player = new Creature(100, 0, "Player", 2, "Player character. This will never be seen", 0, 10, -1, -1, 15, true);
             player.weapon = weaponArray[0];
@@ -231,13 +222,13 @@ namespace Final_Project_2._0
             textBox2.AppendText("*" + box1Text + "*" + System.Environment.NewLine + System.Environment.NewLine);
 
             //Depending on command do thing
-            if (player.currentHitpoints < 0) 
+            if (player.currentHitpoints < 0)
             {
                 if (split[0] == "QUIT")
                 {
                     System.Environment.Exit(0);
                 }
-                else 
+                else
                 {
                     textBox2.AppendText("You are dead. You can do nothing. Leave the game." + System.Environment.NewLine);
                 }
@@ -331,7 +322,7 @@ namespace Final_Project_2._0
                             if (random.Next(1, 20) < targetCreature.armourClass)
                             {
                                 //Randomizes the strings for a more interesting game.
-                                textBox2.AppendText(playerMissDescription[random.Next(0,4)] + System.Environment.NewLine);
+                                textBox2.AppendText(playerMissDescription[random.Next(0, 4)] + System.Environment.NewLine);
                                 monsterAttack();
                             }
                             else
@@ -340,7 +331,7 @@ namespace Final_Project_2._0
                                 {
                                     targetCreature.currentHitpoints -= player.weapon.weaponDamage;
 
-                                    textBox2.AppendText(playerHitDescription[random.Next(0,4)]+ " You deal " + player.weapon.weaponDamage + " points of damage to the foul beast." + System.Environment.NewLine);
+                                    textBox2.AppendText(playerHitDescription[random.Next(0, 4)] + " You deal " + player.weapon.weaponDamage + " points of damage to the foul beast." + System.Environment.NewLine);
                                 }
                                 else
                                 {
@@ -348,7 +339,7 @@ namespace Final_Project_2._0
                                 }
                                 if (targetCreature.currentHitpoints < 1)
                                 {
-                                    textBox2.AppendText(System.Environment.NewLine + " The " + targetCreature.creatureName + monsterDeathDescription[random.Next(0,4)]);
+                                    textBox2.AppendText(System.Environment.NewLine + " The " + targetCreature.creatureName + monsterDeathDescription[random.Next(0, 4)]);
                                     Decoration deadMonster = new Decoration(targetCreature.treasureChance, "Dead " + targetCreature.id, targetCreature.id);
                                     whatRoomPlayerIsIn.decorations.Add(deadMonster);
 
@@ -520,7 +511,7 @@ namespace Final_Project_2._0
                     textBox2.AppendText(System.Environment.NewLine + "You have " + player.currentHitpoints + "/" + player.maxHitpoints + " hitpoints.");
                     textBox2.AppendText(System.Environment.NewLine + "You have a " + player.weapon.getNameAndDescription() + System.Environment.NewLine + " that does 1-" + player.weapon.weaponDamage + " points of damage.");
                 }
-                else if (split[0] == "QUIT") 
+                else if (split[0] == "QUIT")
                 {
                     System.Environment.Exit(0);
                 }
@@ -539,16 +530,16 @@ namespace Final_Project_2._0
             this.button1.Enabled = true;
         }
 
-        public void monsterAttack() 
+        public void monsterAttack()
         {
             //Get monsters from room + store
             List<Creature> monsters = whatRoomPlayerIsIn.monsters;
             if (monsters == null) { return; }
 
             //Find out how many monsters are alive loop and attack
-            for (int i = 0; i < monsters.Count; i++) 
+            for (int i = 0; i < monsters.Count; i++)
             {
-                if (monsters[i].currentHitpoints > 0) 
+                if (monsters[i].currentHitpoints > 0)
                 {
                     //Check for hit
                     if (random.Next(1, 20) > player.armourClass)
@@ -559,7 +550,7 @@ namespace Final_Project_2._0
                             //Hit player for creature damage ( + weapon damage)
                             player.currentHitpoints -= monsters[i].weapon.weaponDamage;
                             textBox2.AppendText("The " + monsters[i].creatureName + monsterHitDescription[random.Next(0, 4)] + " You take " + monsters[i].weapon.weaponDamage + " points of damage" + System.Environment.NewLine);
-                            if (player.currentHitpoints <= 0) 
+                            if (player.currentHitpoints <= 0)
                             {
                                 textBox2.AppendText("You have been killed. The Dungeon Remains unconquered." + System.Environment.NewLine);
                             }
@@ -571,8 +562,8 @@ namespace Final_Project_2._0
                             textBox2.AppendText("The " + monsters[i].creatureName + " lashes out at you, and connects. You take " + monsters[i].creatureDamage + " points of damage" + System.Environment.NewLine);
                         }
                     }
-                       
-                    else 
+
+                    else
                     {
                         textBox2.AppendText("The " + monsters[i].creatureName + monsterMissDescription[random.Next(0, 4)] + System.Environment.NewLine);
                     }
@@ -581,9 +572,9 @@ namespace Final_Project_2._0
             //if monster is alive, attack.
         }
 
-        public void enterHandler(object sender, KeyEventArgs e) 
+        public void enterHandler(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) 
+            if (e.KeyCode == Keys.Enter)
             {
                 doCommand();
             }
@@ -596,11 +587,12 @@ namespace Final_Project_2._0
         }
 
 
-        public void printString(string s) { textBox2.AppendText(s + System.Environment.NewLine); }
+        public void showText(string s) { textBox2.AppendText(s + System.Environment.NewLine); }
+        public void showTextLine(string s) { textBox2.AppendText(s + System.Environment.NewLine); }
     }
 
 
-    
+
 
     public class Action;
     //Possible Actions: 
