@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.DirectoryServices.ActiveDirectory;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Final_Project_2._0
+﻿namespace Final_Project_2._0
 {
     internal class Utilities
     {
@@ -21,10 +14,10 @@ namespace Final_Project_2._0
             return "Bad Direction";
         }
 
-        static public int getDirectionIndex(string dir) 
+        static public int getDirectionIndex(string dir)
         {
             string n = dir.ToUpper();
-            switch(n) 
+            switch (n)
             {
                 case "NORTH": return 0;
                 case "EAST": return 1;
@@ -34,12 +27,12 @@ namespace Final_Project_2._0
             return -1;
         }
 
-        static public string getNumberAffix(int n) 
+        static public string getNumberAffix(int n)
         {
-            switch (n) 
+            switch (n)
             {
                 case 1: return "1st";
-                case 2: return "2nd"; 
+                case 2: return "2nd";
                 case 3: return "3rd";
                 case 4: return "4th";
                 case 5: return "5th";
@@ -50,6 +43,11 @@ namespace Final_Project_2._0
                 case 10: return "10th";
             }
             return "1st";
+        }
+
+        static public int get9()
+        {
+            return 9;
         }
     }
 }
