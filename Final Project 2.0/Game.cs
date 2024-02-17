@@ -40,11 +40,6 @@ namespace Final_Project_2._0
         {
             this.gameForm = f;
 
-            //example
-            //Room r = new Room();
-            //bool[] d = r.doors;
-            //Room r2 = r;
-
             //Room Description Array
             roomDescriptions[0] = "a dimly lit space adorned with faded tapestries, revealing the dungeon's long-forgotten history.";
             roomDescriptions[1] = "a crowded room filled with makeshift beds, where goblins scheme and quarrel.";
@@ -213,10 +208,10 @@ namespace Final_Project_2._0
         private void doCommand()
         {
             // Disable button to prevent interface issues
-            gameForm.button1.Enabled = false;
+            gameForm.setButtonState(false);
 
             //Read what is in the command box
-            string box1Text = gameForm.textBox1.Text.Trim();
+            string box1Text = gameForm.getInputText();
 
             //Splits the command line on  
             string[] split = box1Text.Split(' ');
@@ -527,9 +522,7 @@ namespace Final_Project_2._0
             gameForm.showText(System.Environment.NewLine + System.Environment.NewLine + ">>> What would you like to do? ");
 
             //Reenables button
-            this.textBox1.Text = "";
-            textBox1.Focus();
-            this.button1.Enabled = true;
+            gameForm.prepareForInput();
         }
 
         public void monsterAttack()
@@ -551,23 +544,23 @@ namespace Final_Project_2._0
                         {
                             //Hit player for creature damage ( + weapon damage)
                             player.currentHitpoints -= monsters[i].weapon.weaponDamage;
-                            textBox2.AppendText("The " + monsters[i].creatureName + monsterHitDescription[random.Next(0, 4)] + " You take " + monsters[i].weapon.weaponDamage + " points of damage" + System.Environment.NewLine);
+                            gameForm.showTextLine("The " + monsters[i].creatureName + monsterHitDescription[random.Next(0, 4)] + " You take " + monsters[i].weapon.weaponDamage + " points of damage");
                             if (player.currentHitpoints <= 0)
                             {
-                                textBox2.AppendText("You have been killed. The Dungeon Remains unconquered." + System.Environment.NewLine);
+                                gameForm.showTextLine("You have been killed. The Dungeon Remains unconquered.");
                             }
                         }
                         else
                         {
                             //Hit player for creature damage
                             player.currentHitpoints -= monsters[i].creatureDamage;
-                            textBox2.AppendText("The " + monsters[i].creatureName + " lashes out at you, and connects. You take " + monsters[i].creatureDamage + " points of damage" + System.Environment.NewLine);
+                            gameForm.showTextLine("The " + monsters[i].creatureName + " lashes out at you, and connects. You take " + monsters[i].creatureDamage + " points of damage" + System.Environment.NewLine);
                         }
                     }
 
                     else
                     {
-                        textBox2.AppendText("The " + monsters[i].creatureName + monsterMissDescription[random.Next(0, 4)] + System.Environment.NewLine);
+                        gameForm.showTextLine("The " + monsters[i].creatureName + monsterMissDescription[random.Next(0, 4)]);
                     }
                 }
             }
@@ -589,6 +582,6 @@ namespace Final_Project_2._0
         }
 
 
-        public void printString(string s) { textBox2.AppendText(s + System.Environment.NewLine); }
+        public void printString(string s) { gameForm.showTextLine(s); }
     }
 }
