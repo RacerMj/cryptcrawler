@@ -11,9 +11,9 @@
         public List<Creature> monsters = null;
         public List<Weapon> roomWeapons = new List<Weapon>();
         public Door[] doors = {null, null, null, null}; //north = 0, east = 1, south = 2, west = 3
-        DungeonForm form;
+        Game form;
 
-        public Room(DungeonForm f, int difficulty, int type, Coords currentPosition)
+        public Room(Game f, int difficulty, int type, Coords currentPosition)
         {
             xyz = currentPosition;
             levelDifficulty = difficulty;
@@ -30,7 +30,7 @@
 
             //Populate room with monsters 
             //Pick a monster
-            int num = random.Next(0, DungeonForm.NUMCREATURES);
+            int num = random.Next(0, Game.NUMCREATURES);
             /*while (levelType != f.creatureArray[num].creatureType)
             {
                 num = random.Next(0, DungeonForm.NUMCREATURES);

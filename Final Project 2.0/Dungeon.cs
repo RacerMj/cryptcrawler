@@ -19,14 +19,14 @@ namespace Final_Project_2._0
 
         }
 
-        public void createLevels(DungeonForm f, int levelNumber, string name)
+        public void createLevels(Game f, int levelNumber, string name)
         {
             numberOfLevels = levelNumber;
             dungeonName = name;
             Room lastRoom = new Room(f, -1, 0, new Coords(0, 0, -1));
             for (int i = 0; i < numberOfLevels; i++)
             {
-                Level level = new Level(f, random.Next(0, 3), i, random.Next(DungeonForm.MINROOMS,DungeonForm.MAXROOMS), lastRoom);
+                Level level = new Level(f, random.Next(0, 3), i, random.Next(Game.MINROOMS,Game.MAXROOMS), lastRoom);
                 levels.Add(level);
                 lastRoom = level.rooms.Last();
             }

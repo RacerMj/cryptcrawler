@@ -180,7 +180,7 @@ namespace Final_Project_2._0
 
             //Create Dungeon
             dungeon = new Dungeon();
-            dungeon.createLevels(gameForm, 2, "The Dungeon");
+            dungeon.createLevels(this, 2, "The Dungeon");
 
             whatRoomPlayerIsIn = (dungeon.getLevel(whatLevelPlayerIsOn).rooms.First());
             gameForm.showTextLine("You have entered the dungeon.");
@@ -200,12 +200,12 @@ namespace Final_Project_2._0
             player.weapon = weaponArray[0];
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             doCommand();
         }
 
-        private void doCommand()
+        public void doCommand()
         {
             // Disable button to prevent interface issues
             gameForm.setButtonState(false);
@@ -566,15 +566,6 @@ namespace Final_Project_2._0
             }
             //if monster is alive, attack.
         }
-
-        public void enterHandler(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                doCommand();
-            }
-        }
-
 
         public Dungeon getDungeon()
         {

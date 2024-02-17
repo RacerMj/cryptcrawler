@@ -25,10 +25,10 @@ namespace Final_Project_2._0
 
         public List<Room> rooms = new List<Room>();
         int[,] doorsInRoom = {{1,0,0}, {2,0,0}, {3,0,0}, {1,2,0}, { 1, 3, 0 }, {2,3,0}, {1,2,3}};
-        DungeonForm form;
+        Game form;
 
         
-        public Level(DungeonForm f, int type, int difficulty, int maxRoomNum, Room lastRoom)
+        public Level(Game f, int type, int difficulty, int maxRoomNum, Room lastRoom)
         {
             levelType = type;
             levelDifficulty = difficulty;
