@@ -44,10 +44,5 @@
             }
             return "1st";
         }
-
-        static public int get9()
-        {
-            return 9;
-        }
     }
 }
