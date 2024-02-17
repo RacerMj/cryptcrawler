@@ -47,7 +47,7 @@
 
         static public int get9()
         {
-            return 99;
+            return 999;
         }
     }
 }
